@@ -1,5 +1,4 @@
 # functions to manage user input
-import csv
 from typing import Tuple
 
 from .exceptions import CmException
@@ -19,22 +18,17 @@ def get_html_filename() -> str:
 def get_urls() -> list:
     try:
         cards_urls = []
-        filename = input("Insert the csv filename: ")
-        with open(filename, 'r') as csvfile:
-            datareader = csv.reader(csvfile)
-            # the csv input file contains only a row of comma separated urls
-            # so the for loop runs only once
-            for row in datareader:
-                cards_urls = row
-                break
+        filename = input("Insert the input filename: ")
+        with open(filename, 'r') as file:
+            for url in file:
+                url = url.strip()
+                cards_urls.append(url)
 
         processed_urls = [validate_input(url) for url in cards_urls]
         return processed_urls
 
     except FileNotFoundError:
         raise CmException("The specified file was not found. Please check the file path and try again.")
-    except csv.Error as e:
-        raise CmException(f"CSV error: {e}")
     except Exception as e:
         raise CmException(f"An unexpected error occurred: {e}")
 

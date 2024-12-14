@@ -2,7 +2,7 @@
 > ⚠️ Disclaimer: This project is intended for educational and experimental purposes only. Actions performed by this code may be prohibited by the website, and unauthorized use could lead to legal consequences. Users are solely responsible for their actions and any potential legal issues that may arise from using this tool.
 > 
 A data extraction tool to collect information from Cardmarket.<br>
-Input a csv file with the urls of the cards you need and get a HTML file with card name, image and prices.
+Input a txt file with the urls of the cards you need and get a HTML file with card name, image and prices.
 ![Script HTML output](attachments/output.png)
 ## Python version
 > This project requires **Python 3.10** or later.
@@ -39,10 +39,13 @@ You can find the variable that specifies the wait time in ```config.py```. You c
 ```
 NEXT_REQ_WAIT_TIME = 10
 ```
-### Csv file
-In the project folder create a ```.csv``` file with the urls of the cards you need.
-```csv
-https://www.cardmarket.com/en/Pokemon/Products/Singles/EX-Deoxys/Jirachi-DX9,https://www.cardmarket.com/en/Pokemon/Products/Singles/Violet-ex/Drowzee-V2-sv1V086 .........
+### Input file
+In the project folder create a ```.txt``` file with the urls of the cards you need, separated by a new line.
+```txt
+https://www.cardmarket.com/en/Pokemon/Products/Singles/EX-Deoxys/Jirachi-DX9
+https://www.cardmarket.com/en/Pokemon/Products/Singles/Violet-ex/Drowzee-V2-sv1V086
+https://www.cardmarket.com/en/Pokemon/.........
+https://www.cardmarket.com/en/Pokemon/.........
 ```
 
 ## Running
@@ -54,9 +57,9 @@ python3 main.py
 ![Execution of the code](attachments/waiting.png)
 Finally copy the path of the HTML filename that is displayed on your terminal at the end of the script, and paste it in a browser to see the file.
 
-![Program finished](attachments/final.png)
+![Program finished](attachments/final.jpg)
 
 ## To do
+- [x] Change csv file to new line separated
 - [ ] Proxy support
 - [ ] HTML to PDF
-- [ ] Change csv file to new line separated
