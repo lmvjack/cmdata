@@ -26,7 +26,7 @@ A ```requirements.txt``` file is available in the project directory and can be u
 
 ---
 ### Request headers
-Request headers can be found in the ```config.py``` file. To successfully make a request, a cookie header may be necessary, although not always according to my tests. To have higher probabilities of doing a successful request, you can manually copy a cookie header from a browser and then use it for all you next requests.
+Request headers can be found in the ```config.py``` file. To successfully make a request, a cookie header may be useful, although not always necessary according to my tests. To have higher probabilities of doing a successful request, you can manually copy a cookie header from a browser and then use it for all you next requests.
 ![get cookie](attachments/cookie.jpg)
 Then with your favourite text editor create a **.env** file in the project directory and set the ```COOKIE``` variable.
 ```
