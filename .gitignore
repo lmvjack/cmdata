@@ -1,0 +1,6 @@
+downloads/
+*.csv
+*.env
+.idea/
+__pycache__/
+.DS_Store/

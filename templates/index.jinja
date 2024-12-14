@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon cards</title>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+    body {
+        font-family: "Rethink Sans", sans-serif;
+    }
+
+    p, h1, h3 {
+        margin: 0;
+    }
+
+    .main {
+        padding: 3%;
+    }
+
+    .title-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 4px;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-inner-container{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .card {
+        object-fit: cover;
+        width: auto;
+        height: 170px;
+    }
+</style>
+<body>
+    <section class="main">
+        <div class="title-container">
+            <h1>Your cards</h1>
+            <p>See source code: https://github.com/lmvjack/cmdata</p>
+        </div>
+
+        <div class="main-container">
+            {% for card in cards %}
+                <div class="card-container">
+                    <img src="{{ card['Image'] }}" alt="{{ card['Name'] }}" class="card" />
+                    <div class="card-inner-container">
+                        <h3 style="margin-bottom: 8px;">{{ card['Name'] }}</h3>
+                        <p>From: {{ card['From'] }}</p>
+                        <p>Price Trend: {{ card['Price Trend'] }}</p>
+                        <p>30-days average price: {{ card['30-days average price'] }}</p>
+                        <p>7-days average price: {{ card['7-days average price'] }}</p>
+                        <p>1-day average price: {{ card['1-day average price'] }}</p>
+                    </div>
+
+                </div>
+            {%  endfor %}
+        </div>
+    </section>
+</body>
+</html>
