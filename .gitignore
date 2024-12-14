@@ -1,6 +1,6 @@
-downloads/
 *.csv
 *.env
+.DS_Store
+downloads/
 .idea/
 __pycache__/
-.DS_Store/
