@@ -50,7 +50,7 @@ https://www.cardmarket.com/en/Pokemon/.........
 
 ## Running
 Make sure to enter your virtual environment before running the program.<br>
-In the project directory run the main file. You will be prompted to insert the csv input filename and the HTML output filename.
+In the project directory run the main file. You will be prompted to insert the input filename and the HTML output filename.
 ```aiignore
 pipenv run python main.py
 ```
