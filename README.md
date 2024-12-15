@@ -52,7 +52,7 @@ https://www.cardmarket.com/en/Pokemon/.........
 Make sure to enter your virtual environment before running the program.<br>
 In the project directory run the main file. You will be prompted to insert the csv input filename and the HTML output filename.
 ```aiignore
-python3 main.py
+pipenv run python main.py
 ```
 ![Execution of the code](attachments/waiting.png)
 Finally copy the path of the HTML filename that is displayed on your terminal at the end of the script, and paste it in a browser to see the file.
