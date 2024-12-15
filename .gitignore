@@ -1,5 +1,6 @@
 *.csv
 *.env
+*.txt
 .DS_Store
 downloads/
 .idea/
